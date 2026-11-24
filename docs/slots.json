@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 05:51",
+ "updated": "2026-11-24 13:42",
  "days": [
   {
    "date": "2026-11-24",
@@ -22,18 +22,6 @@
       {
        "label": "10–15 人",
        "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-1-10-15%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89/?date=2026-11-24&time=1910"
-      }
-     ]
-    },
-    {
-     "space": "space4",
-     "name": "空間 4・天母棒球場",
-     "start": "19:40",
-     "end": "20:40",
-     "links": [
-      {
-       "label": "1–5 人",
-       "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-4-1-5%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89/?date=2026-11-24&time=1940"
       }
      ]
     },
@@ -68,6 +56,18 @@
    "date": "2026-11-26",
    "weekday": 4,
    "slots": [
+    {
+     "space": "space4",
+     "name": "空間 4・天母棒球場",
+     "start": "15:00",
+     "end": "16:00",
+     "links": [
+      {
+       "label": "1–5 人",
+       "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-4-1-5%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89/?date=2026-11-26&time=1500"
+      }
+     ]
+    },
     {
      "space": "space1",
      "name": "空間 1・三玉宮",
