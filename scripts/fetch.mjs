@@ -1,17 +1,18 @@
 // 抓 Tinybook 前台可預約時段 → docs/slots.json
-// 熱門區間：平日（一～五）完整落在 14:30–21:30 內的時段，未來 7 天
+// 熱門區間（時段須完整落在區間內），未來 7 天
+// 空間1：平日 14:30–21:30、週末 08:40–21:30｜空間4：平日 15:00–18:30、週末 09:10–18:30
+// 要調整區間：改下方 SPACES 裡的 weekday / weekend
 import { writeFileSync } from 'node:fs';
 
 const BASE = 'https://tinybot.cc/lineup';
 const DAYS_AHEAD = 7;
-const HOT_START = 1430; // 含
-const HOT_END = 2130;   // 時段須在此前結束
-const WEEKDAYS = [1, 2, 3, 4, 5];
+const WEEKDAYS = [0, 1, 2, 3, 4, 5, 6];
 const SLOT_MIN = 60;
 
 const SPACES = [
   {
     key: 'space1', name: '空間 1・三玉宮',
+    weekday: [1430, 2130], weekend: [840, 2130],
     // 三個方案共用同一空間，任一有時段即有空
     plans: [
       { label: '1–5 人', id: '965259', slug: '%E7%A9%BA%E9%96%93-1' },
@@ -21,6 +22,7 @@ const SPACES = [
   },
   {
     key: 'space4', name: '空間 4・天母棒球場',
+    weekday: [1500, 1830], weekend: [910, 1830],
     plans: [
       { label: '1–5 人', id: '13814296', slug: '%E7%A9%BA%E9%96%93-4-1-5%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89' },
     ],
@@ -83,7 +85,8 @@ async function main() {
       }
       for (const s of [...set].sort()) {
         const n = Number(s);
-        if (n < HOT_START || toMin(n) + SLOT_MIN > toMin(HOT_END)) continue;
+        const [ws, we] = [0, 6].includes(d.getUTCDay()) ? sp.weekend : sp.weekday;
+        if (n < ws || toMin(n) + SLOT_MIN > toMin(we)) continue;
         if (i === 0 && n <= nowHHMM) continue;
         const st = toMin(n);
         slots.push({
