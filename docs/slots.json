@@ -1,32 +1,6 @@
 {
- "updated": "2026-11-27 19:40",
+ "updated": "2026-11-28 04:20",
  "days": [
-  {
-   "date": "2026-11-27",
-   "weekday": 5,
-   "slots": [
-    {
-     "space": "space1",
-     "name": "空間 1・三玉宮",
-     "start": "20:20",
-     "end": "21:20",
-     "links": [
-      {
-       "label": "1–5 人",
-       "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-1/?date=2026-11-27&time=2020"
-      },
-      {
-       "label": "6–10 人",
-       "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-1-6-10%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89/?date=2026-11-27&time=2020"
-      },
-      {
-       "label": "10–15 人",
-       "url": "https://tinybot.cc/lineup/product/%E7%A9%BA%E9%96%93-1-10-15%E4%BA%BA%E9%80%B2%E5%A0%B4%EF%BC%89/?date=2026-11-27&time=2020"
-      }
-     ]
-    }
-   ]
-  },
   {
    "date": "2026-11-28",
    "weekday": 6,
@@ -318,6 +292,11 @@
      ]
     }
    ]
+  },
+  {
+   "date": "2026-12-04",
+   "weekday": 5,
+   "slots": []
   }
  ]
 }
